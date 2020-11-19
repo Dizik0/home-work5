@@ -53,11 +53,24 @@ h1, h2, h3, ul, p{
 
         /* header */
 
+.air{
+    height: 80px;
+}
+
 .header{
+    position: fixed;
     padding-top: 24px;
     padding-bottom: 25px;
     align-items: center;
     display: flex;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    background-color: var(--background-color-white);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid #ECECEC;
 }
             
 .header .container{
@@ -131,15 +144,6 @@ h1, h2, h3, ul, p{
     color: var(--accent-color-blue);
 }
 
-.line{
-    position: absolute;
-    width: 1600px;
-    height: 0px;
-    left: 0px;
-    top: 80px;
-    border: 1px solid #ECECEC;
-}
-
 .phone-svg{
     height: 16px;
     width: 10px;
@@ -153,6 +157,7 @@ h1, h2, h3, ul, p{
     border-radius: 2px;
     border: 2px solid var(--accent-color-blue);
     display: block;
+    transition-duration: 300ms;
     left: 0;
     right: 0;
     background-color: var(--accent-color-blue);
@@ -186,6 +191,7 @@ h1, h2, h3, ul, p{
 
 
 .link{
+    transition-duration: 300ms;
     text-decoration: none;
     color: inherit;
 }
@@ -205,6 +211,7 @@ h1, h2, h3, ul, p{
     letter-spacing: 0.03em;
     border-radius: 4px;
     padding: 6px 22px; 
+    transition-duration: 300ms;
     border: none; 
     outline: none;   
 } 
@@ -226,6 +233,7 @@ h1, h2, h3, ul, p{
 }
 
     /* main */
+
 
 .main{
     padding-top: 94px;
@@ -277,6 +285,40 @@ h1, h2, h3, ul, p{
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
+}
+
+.blye-box-gallery{
+    position: relative;
+    overflow: hidden;
+}
+
+
+.blye-box-gallery-text{ 
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 63px;
+    background: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition-duration: 300ms;
+    transition: transform 0.5s;
+}
+
+.blye-text{
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--bg-btn-color-white-gray);
+    text-align: center;
+    
+}
+
+.link-galery:hover .blye-box-gallery-text,
+.link-galery:focus .blye-box-gallery-text{
+    opacity: 1;
+    transform: translateY(-0%);
 }
 
     /* footer */
@@ -332,6 +374,7 @@ h1, h2, h3, ul, p{
     height: 44px;
     border-radius: 50%;
     align-items: center;
+    transition-duration: 300ms;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.1);
     margin-right: 10px;

@@ -52,7 +52,7 @@
         <div class="container">
           <div class="hero-box">
             <h1 class="hero-text">Эффективные решения для вашего бизнеса</h1>
-            <button type="button" class="btn btn-text">Заказать услугу</button>
+            <button type="button" class="btn btn-text" data-modal-open>Заказать услугу</button>
           </div>
         </div>
       </section>
@@ -321,13 +321,20 @@
             </a></li>
           </ul> 
         </div>
+        <div>
+          <h3 class="footer-clases">Подпишитесь на рассылку</h3>
+          <form class="mailing">
+            <input type="email" class="mail" name="mail" placeholder="E-mail">
+            <button type="button" class="btn">Подписаться</button>
+          </form>
+        </div>
       </div>
     </footer>
-    <div class="bacdrop">
-        <div class="bacdrop-box">
-          <button class="closed" data-modal-close>х</button>
-        </div>
-    </div>
-    <script></script>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="btn-close" data-modal-close>X</button>
+      </div>
+  </div>
+  <script src="./js/modal.js"></script>
   </body>
 </html>
