@@ -236,6 +236,7 @@ h1, h2, h3, ul, p{
     cursor: pointer;
     border-radius: 4px;
     transition-duration: 300ms;
+    /* padding-top: 13px; */
 }
 
 .btn-text{
@@ -626,7 +627,7 @@ h1, h2, h3, ul, p{
 }
 
 .modal{
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
@@ -635,6 +636,15 @@ h1, h2, h3, ul, p{
     height: 581px;
     background-color: var(--background-color-white);
     transition: transform 0.5s;
+}
+
+.text-modal{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--secondary-color-black);
 }
 
 .mailing .btn{
@@ -676,3 +686,61 @@ transition-duration: 300ms;
 .mail:focus::placeholder{
     color: var(--background-color-white);
 }
+
+.form-position{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.form-name{
+    position: relative;
+    width: 448px;
+    height: 40px;
+}
+
+.mail:-webkit-autofill,
+.mail:-webkit-autofill:hover, 
+.mail:-webkit-autofill:focus{
+    -webkit-text-fill-color: var(--background-color-white);
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-color-sektion) inset;
+}
+
+.lable{
+    display: flex;
+    flex-direction: column;
+}
+
+.social-item-btn{
+    position: absolute;
+    right: 28px;
+    top: 13px;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    fill: var(--background-color-white);
+}
+
+.btn-footer:focus .social-item-btn,
+.btn-footer:hover .social-item-btn{  
+    fill: var(--accent-color-blue);
+    transition-duration: 300ms;
+}
+
+.btn-footer{
+    position: relative;
+    padding-right: 63px;
+}
+
+.social-item-modal{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 10px;
+    top: 50px;
+
+}
+

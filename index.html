@@ -324,8 +324,12 @@
         <div>
           <h3 class="footer-clases">Подпишитесь на рассылку</h3>
           <form class="mailing">
-            <input type="email" class="mail" name="mail" placeholder="E-mail">
-            <button type="button" class="btn">Подписаться</button>
+            <input type="email" class="mail" name="mail" placeholder="E-mail" required>
+            <button type="submit" class="btn btn-footer">Подписаться
+              <svg class="social-item-btn">
+                <use href="./photo/sprite/symbol-defs-2.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -333,7 +337,17 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="btn-close" data-modal-close>X</button>
+        <p class="text-modal">Оставьте свои данные, мы вам перезвоним</p>
+        <form>
+          <label for="name" id="name" class="lable"> Имя
+            <input type="name" name="name" id="name" class="form-name">
+            <svg class="social-item-modal">
+              <use href="./photo/sprite/symbol-defs-2.svg#Vector"></use>
+            </svg>
+          </label>
+        </form>
       </div>
+
   </div>
   <script src="./js/modal.js"></script>
   </body>
