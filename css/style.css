@@ -236,7 +236,6 @@ h1, h2, h3, ul, p{
     cursor: pointer;
     border-radius: 4px;
     transition-duration: 300ms;
-    /* padding-top: 13px; */
 }
 
 .btn-text{
@@ -616,14 +615,21 @@ h1, h2, h3, ul, p{
 
 .btn-close{
     position: absolute;
-    margin-right: 8px;
-    margin-top: 8px;
-    right: 0px;
+    top: 8px;
+    right: 8px;
     width: 30px;
     height: 30px;
+    display: block;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background: var(--background-color-white);
+    color: #000000;
+    cursor: pointer;
+}
+.btn-close:focus,
+.btn-close:hover{
+    color: var(--accent-color-blue);
+    background-color: var(--background-color-white);
 }
 
 .modal{
@@ -636,22 +642,26 @@ h1, h2, h3, ul, p{
     height: 581px;
     background-color: var(--background-color-white);
     transition: transform 0.5s;
+    padding-left: 41px;
+    padding-top: 40px;
 }
 
 .text-modal{
-    font-weight: bold;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
+    display: block;
+    width: 448px;
+    height: 23px;
     letter-spacing: 0.03em;
     color: var(--secondary-color-black);
 }
 
-.mailing .btn{
-font-size: 16px;
-line-height: 1.87;
-letter-spacing: 0.06em;
-transition-duration: 300ms;
+.mail .btn{
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    transition-duration: 300ms;
 }
 
 .btn:focus,
@@ -687,18 +697,13 @@ transition-duration: 300ms;
     color: var(--background-color-white);
 }
 
-.form-position{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-
 .form-name{
-    position: relative;
+    padding-left: 42px;
     width: 448px;
     height: 40px;
+    margin-top: 4px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .mail:-webkit-autofill,
@@ -708,9 +713,21 @@ transition-duration: 300ms;
     -webkit-box-shadow: 0 0 0px 1000px var(--bg-color-sektion) inset;
 }
 
+.form-name:-webkit-autofill,
+.form-name:-webkit-autofill:hover, 
+.form-name:-webkit-autofill:focus{
+    -webkit-text-fill-color: var(--secondary-color-black);
+    -webkit-box-shadow: 0 0 0px 1000px var(--background-color-white) inset;
+}
+
 .lable{
     display: flex;
     flex-direction: column;
+    margin-top: 12px;
+}
+
+.name-box-position{
+    position: relative;
 }
 
 .social-item-btn{
@@ -737,10 +754,65 @@ transition-duration: 300ms;
 
 .social-item-modal{
     position: absolute;
-    width: 12px;
-    height: 12px;
-    left: 10px;
-    top: 50px;
-
+    left: 14px;
+    top: 18px;
+    fill: var(--secondary-color-black);
 }
 
+.form-name:focus .social-item-modal ,
+.form-name:hover .social-item-modal{
+    fill: var(--accent-color-blue);
+    border-color: var(--accent-color-blue);
+}
+
+.coment{
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    text-align: start;
+    margin-top: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+}
+
+.coment-lable-box{
+    margin-top: 12px;
+}
+
+.text-chek-box{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.btn-modal{
+    background-color: var(--accent-color-blue);
+    color: var(--background-color-white);
+    width: 200px;
+    height: 50px;
+    border: 0px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 124px;
+    margin-top: 30px;
+}
+
+.btn-text-modal{
+    font-size: 16px;
+    line-height: 1.87;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+
+.link-modal{
+    color: var(--accent-color-blue);
+}
+
+.checkbox{
+    margin-right: 8px;
+    width: 16px;
+    height: 15px;
+}

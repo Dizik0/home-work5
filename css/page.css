@@ -408,5 +408,86 @@ h1, h2, h3, ul, p{
 }
 
 .box-footer{
+    width: 206px;
+    height: 80px;
     margin-left: 70px;
+    margin-right: 90px;
+}
+
+.mailing .btn{
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    transition-duration: 300ms;
+}
+
+.mail{
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: transparent;
+    outline: none;
+    margin-right: 12px;
+    color: var(--background-color-white);
+    padding-left: 16px;
+    margin-top: 20px;
+}
+
+.mail::placeholder{
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.mail:-webkit-autofill,
+.mail:-webkit-autofill:hover, 
+.mail:-webkit-autofill:focus{
+    -webkit-text-fill-color: var(--background-color-white);
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-color-sektion) inset;
+}
+
+.mail:focus{
+    border-color: var(--accent-color-blue);
+}
+
+.mail:focus::placeholder{
+    color: var(--background-color-white);
+}
+
+.social-item-btn{
+    position: absolute;
+    right: 28px;
+    top: 13px;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    fill: var(--background-color-white);
+}
+
+.btn-footer:focus .social-item-btn,
+.btn-footer:hover .social-item-btn{  
+    fill: var(--accent-color-blue);
+    transition-duration: 300ms;
+    color: var(--accent-color-blue);
+}
+
+.btn-footer:hover{
+    color: var(--accent-color-blue);
+    background-color: var(--background-color-white);
+    transition-duration: 300ms;
+}
+
+.btn-footer{
+    width: 200px;
+    height: 50px;
+    position: relative;
+    padding-right: 63px;
+    color: var(--background-color-white);
+    background-color: var(--accent-color-blue);
+    border: 0;
+    border-radius: 4px;
+    
 }

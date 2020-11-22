@@ -337,17 +337,45 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="btn-close" data-modal-close>X</button>
-        <p class="text-modal">Оставьте свои данные, мы вам перезвоним</p>
+        <b class="text-modal">Оставьте свои данные, мы вам перезвоним</b>
         <form>
-          <label for="name" id="name" class="lable"> Имя
-            <input type="name" name="name" id="name" class="form-name">
-            <svg class="social-item-modal">
-              <use href="./photo/sprite/symbol-defs-2.svg#Vector"></use>
-            </svg>
-          </label>
+            <label for="name" class="lable"> Имя
+              <div class="name-box-position">
+                <input type="name" name="name" id="name" class="form-name" required>
+                <svg width="12" height="12" class="social-item-modal">
+                  <use href="./photo/sprite/symbol-defs-2.svg#Vector"></use>
+                </svg>
+              </div>
+            </label>
+            <label for="tel" class="lable"> Телефон
+              <div class="name-box-position">
+                <input type="tel" name="tel" id="tel" class="form-name" required pattern="[0-9]{8,12}">
+                <svg width="13" height="13" class="social-item-modal">
+                  <use href="./photo/sprite/symbol-defs-2.svg#Vector-2"></use>
+                </svg>
+              </div>
+            </label>
+            <label for="email" class="lable"> Почта
+              <div class="name-box-position">
+                <input type="mail" name="email" id="mail" class="form-name" required>
+                <svg width="15" height="12" class="social-item-modal">
+                  <use href="./photo/sprite/symbol-defs-2.svg#Vector-3"></use>
+                </svg>
+              </div>
+            </label>
+            <div class="coment-lable-box">
+              <label for="coment" class="coment-lable">Комментарий
+                  <textarea name="text" id="coment" placeholder="Введите текст"  class="coment" cols="30" rows="10"></textarea>
+              </label>
+            </div> 
+            <p class="text-chek-box">
+              <input type="checkbox" class="checkbox" required>Соглашаюсь с рассылкой и принимаю 
+              <a href="#" class="link-modal">Условия договора</a>
+            </p>
+            <button type="submit" class="btn-modal btn-text-modal" data-modal-close>Отправить</button>
         </form>
-      </div>
 
+      </div>
   </div>
   <script src="./js/modal.js"></script>
   </body>
